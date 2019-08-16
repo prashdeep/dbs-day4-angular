@@ -14,6 +14,8 @@ import { ThreeComponent } from './three/three.component';
 import { RouterModule } from '@angular/router';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { RegisterComponent } from './register/register.component';
+import { UsersComponent } from './users/users.component';
+import { UserDetailsComponent } from './user-details/user-details.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { RegisterComponent } from './register/register.component';
     TwoComponent,
     ThreeComponent,
     NotFoundComponent,
-    RegisterComponent
+    RegisterComponent,
+    UsersComponent,
+    UserDetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -45,6 +49,14 @@ import { RegisterComponent } from './register/register.component';
       {
         path:'one',
         component:OneComponent
+      },
+      {
+        path:'users',
+        component:UsersComponent
+      },
+      {
+        path:'users/:id',
+        component:UserDetailsComponent
       },
       {
         path:'two',
