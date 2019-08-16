@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-child',
@@ -7,7 +7,8 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class ChildComponent {
 
- @Input("data") inputData;
+  @Input('cols') columns:any[];
+  @Input("data") inputData:any[] ;
 
  @Output('eventClicked') eventHandler = new EventEmitter();
 
