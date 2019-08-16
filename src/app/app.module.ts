@@ -13,6 +13,7 @@ import { TwoComponent } from './two/two.component';
 import { ThreeComponent } from './three/three.component';
 import { RouterModule } from '@angular/router';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
     OneComponent,
     TwoComponent,
     ThreeComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
@@ -51,6 +53,10 @@ import { NotFoundComponent } from './not-found/not-found.component';
       {
         path:'three',
         component:ThreeComponent
+      },
+      {
+        path:'register',
+        component:RegisterComponent
       },
       {
         path:'**',
