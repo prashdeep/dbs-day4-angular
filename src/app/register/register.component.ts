@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from '../user.service';
+import { User } from '../User';
 
 @Component({
   selector: 'app-register',
@@ -7,14 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegisterComponent {
 
-  log(username){
-    console.log('came inside the log method....');
-    console.log(username)
+  constructor(private userService:UserService){
+
   }
 
+
   handleFormData(formData){
-    console.log('handle form data');
-    console.log(formData);
+    let user:User = new User(12,"Hari");
+    this.userService.addUser(user);
   }
 
 }
