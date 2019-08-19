@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { User } from './User';
+import {HttpClient} from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -7,7 +8,7 @@ import { User } from './User';
 export class UserService {
 
   users:User[]=[];
-  constructor() { }
+  constructor(private httpClient:HttpClient) { }
 
   addUser(user:User):void{
     this.users.push(user);

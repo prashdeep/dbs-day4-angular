@@ -16,6 +16,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { RegisterComponent } from './register/register.component';
 import { UsersComponent } from './users/users.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
+import {HttpClientModule} from '@angular/common/http';
+import { NameFormatterPipe } from './name-formatter.pipe';
 
 @NgModule({
   declarations: [
@@ -31,12 +33,14 @@ import { UserDetailsComponent } from './user-details/user-details.component';
     NotFoundComponent,
     RegisterComponent,
     UsersComponent,
-    UserDetailsComponent
+    UserDetailsComponent,
+    NameFormatterPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule,
     RouterModule.forRoot([
       {
         path:'',

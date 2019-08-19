@@ -15,7 +15,10 @@ export class CoursesComponent{
       price:8000,
       offer:true,
       duration:10,
-      participants:0
+      participants:0,
+      rating:4.5667,
+      launchDate:new Date(2019,5,21),
+      instructor:'Naveen'
     },
     {
       name:"Maven", 
@@ -24,7 +27,10 @@ export class CoursesComponent{
       offer:false,
       imgUrl:'../assets/angular.png',
       duration:2,
-      participants:0
+      participants:0,
+      rating:4.67667,
+      launchDate:new Date(2019,5,21),
+      instructor:'Harish'
     },
     {
       name:"Spring Boot", 
@@ -33,7 +39,10 @@ export class CoursesComponent{
       price:10000,
       imgUrl:'../assets/angular.png',
       duration:8,
-      participants:0
+      participants:0,
+      rating:4.865444,
+      launchDate:new Date(2019,4,23),
+      instructor:'Rama'
     },
     {
       name:"Hibernate", 
@@ -42,7 +51,10 @@ export class CoursesComponent{
       imgUrl:'../assets/angular.png',
       price:8000,
       duration:4,
-      participants:0
+      participants:0,
+      rating:3.786565,
+      launchDate:new Date(2018,8,18),
+      instructor:'Pavan'
     },
     {
       name:"JPA", 
@@ -51,7 +63,10 @@ export class CoursesComponent{
       price:8000,
       imgUrl:'../assets/angular.png',
       duration:4,
-      participants:0
+      participants:0,
+      rating:3.56776,
+      launchDate:new Date(2019,5,21),
+      instructor:'Pavan'
     },
     {
       name:"Angular", 
@@ -60,7 +75,10 @@ export class CoursesComponent{
       price:10000,
       duration:4,
       imgUrl:'../assets/angular.png',
-      participants:0
+      participants:0,
+      rating:4.5555,
+      launchDate:new Date(2018,8,18),
+      instructor:'Rajesh'
     }
   ];
 
