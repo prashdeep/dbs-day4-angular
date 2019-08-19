@@ -11,7 +11,9 @@ import { Subscription } from 'rxjs';
 export class UsersComponent implements OnInit, OnDestroy {
 
   users:User[];
+  currentUser:User;
   private subscription:Subscription;
+  private currentUserSubscription:Subscription;
 
   constructor(private userService:UserService) { }
 
@@ -26,10 +28,15 @@ export class UsersComponent implements OnInit, OnDestroy {
 
   ngOnDestroy(): void {
     this.subscription.unsubscribe();
+    if(this.currentUserSubscription){
+      this.currentUserSubscription.unsubscribe();
+    }
   }
 
-  findById(id):User{
-    return this.userService.findByUserId(id);
+  findById(id):void{
+    this.currentUserSubscription = this.userService
+          .findByUserId(id)
+          .subscribe(user => this.currentUser = user)
   }
 
 }

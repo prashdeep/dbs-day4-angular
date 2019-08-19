@@ -21,8 +21,8 @@ export class UserService {
     return this.httpClient.get<User[]>(this.USER_API_URL)   
   }
 
-  findByUserId(id:number):User{
-    return this.users.filter(user => user.id === id)[0];
+  findByUserId(id:number):Observable<User>{
+    return this.httpClient.get<User>(this.USER_API_URL+"/"+id)
   }
 
   deleteUser(id:number):void{
