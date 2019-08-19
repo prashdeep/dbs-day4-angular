@@ -4,6 +4,7 @@
         [class.bg-primary]="!course.offer">
         {{course.name}}
         <a href="#" *ngIf="course.offer" class="badge badge-warning">Offer</a>
+        <a href="#" class="badge badge-danger" (click)="deleteCourse(course)">X</a>
       </div>
   <div class="card-body"
        [style.color]="'white'"

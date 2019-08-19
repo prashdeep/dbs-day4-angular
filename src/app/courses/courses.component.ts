@@ -9,7 +9,7 @@ import { CourseService } from '../course.service';
 export class CoursesComponent implements OnInit{
 
   private courses:any[];
-  
+
   constructor(private courseService:CourseService){}
 
   ngOnInit(): void {
@@ -23,6 +23,10 @@ export class CoursesComponent implements OnInit{
 
   onCourseNameChange(){
    // console.log(`came inside the change event ${this.coursename}` );
+  }
+
+  deleteCourseHandler(id){
+    console.log('came inside the delete course handler inside the parent '+id);
   }
   
 }
