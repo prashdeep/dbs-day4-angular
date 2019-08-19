@@ -25,8 +25,18 @@ export class UserService {
     return this.httpClient.get<User>(this.USER_API_URL+"/"+id)
   }
 
-  deleteUser(id:number):void{
-    this.users = this.users.filter(user => user.id !== id);
+  saveUser(user:User):Observable<any>{
+    return this.httpClient.post(this.USER_API_URL, JSON.stringify(user))
   }
+  
+  updateUser(id: number, user:User):Observable<any>{
+    return this.httpClient.put(this.USER_API_URL+"/"+id, JSON.stringify(user))
+  }
+
+  deleteUser(id:number):Observable<any>{
+    return this.httpClient.delete(this.USER_API_URL+"/"+id);
+  }
+
+
 
 }

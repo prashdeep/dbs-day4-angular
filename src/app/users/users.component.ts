@@ -39,4 +39,8 @@ export class UsersComponent implements OnInit, OnDestroy {
           .subscribe(user => this.currentUser = user)
   }
 
+  saveUser(user:User){
+    this.userService.saveUser(user).subscribe(response => console.log('user saved...'))
+  }
+
 }

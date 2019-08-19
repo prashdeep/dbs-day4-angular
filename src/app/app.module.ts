@@ -18,6 +18,7 @@ import { UsersComponent } from './users/users.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
 import {HttpClientModule} from '@angular/common/http';
 import { NameFormatterPipe } from './name-formatter.pipe';
+import { UserRegisterComponent } from './user-register/user-register.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { NameFormatterPipe } from './name-formatter.pipe';
     RegisterComponent,
     UsersComponent,
     UserDetailsComponent,
-    NameFormatterPipe
+    NameFormatterPipe,
+    UserRegisterComponent
   ],
   imports: [
     BrowserModule,
@@ -57,6 +59,10 @@ import { NameFormatterPipe } from './name-formatter.pipe';
       {
         path:'users',
         component:UsersComponent
+      },
+      {
+        path:'user-register',
+        component:UserRegisterComponent
       },
       {
         path:'users/:id',
