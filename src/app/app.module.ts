@@ -19,6 +19,8 @@ import { UserDetailsComponent } from './user-details/user-details.component';
 import {HttpClientModule} from '@angular/common/http';
 import { NameFormatterPipe } from './name-formatter.pipe';
 import { UserRegisterComponent } from './user-register/user-register.component';
+import { SubOneComponent } from './sub-one/sub-one.component';
+import { SubTwoComponent } from './sub-two/sub-two.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,9 @@ import { UserRegisterComponent } from './user-register/user-register.component';
     UsersComponent,
     UserDetailsComponent,
     NameFormatterPipe,
-    UserRegisterComponent
+    UserRegisterComponent,
+    SubOneComponent,
+    SubTwoComponent
   ],
   imports: [
     BrowserModule,
@@ -50,7 +54,17 @@ import { UserRegisterComponent } from './user-register/user-register.component';
       },
       {
         path:'parent',
-        component:ParentComponent
+        component:ParentComponent,
+        children:[
+          {
+            path:'sub-one',
+            component:SubOneComponent
+          },
+          {
+            path:'sub-two',
+            component:SubTwoComponent
+          }
+        ]
       },
       {
         path:'one',
