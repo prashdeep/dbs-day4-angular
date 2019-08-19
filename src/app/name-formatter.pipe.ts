@@ -5,10 +5,13 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class NameFormatterPipe implements PipeTransform {
 
-  transform(value: any, args?: any): any {
+  transform(user: {firstname:string, lastname:string}, args?: any): any {
     console.log(args)
-    const instrcutor:string = value as string;
-    return args === 'male'? `Mr. ${value}`: `Mrs. ${value}` ;
+    if(user){
+      return args === 'male'? `Mr. ${user.lastname} ${user.firstname}`: `Mrs. ${user.lastname } ${user.firstname}` ;
+    }else {
+      return ''
+    }
   }
 
 }

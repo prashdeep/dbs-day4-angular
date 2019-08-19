@@ -15,9 +15,10 @@
     <img [src]="course.imgUrl" />
     <p class="card-text">Price: {{course.price | currency:'INR':true:'4.2-2'}}</p>
 
-    <p class="card-text">Duration: {{course.duration}}</p>
+    <p class="card-text">Duration: {{course?.duration}}</p>
     
-    <p class="card-text">Instructor: {{course.instructor | nameFormatter:'male' }}</p>
+    
+    <p class="card-text" *ngIf="course.instructor">Instructor: {{course.instructor | nameFormatter:'male' }}</p>
     
     
     <p class="card-text">Participants: {{course.participants}}</p>
