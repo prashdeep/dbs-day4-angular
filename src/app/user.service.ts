@@ -17,8 +17,8 @@ export class UserService {
     this.users.push(user);
   }
 
-  listUsers():Observable<Object>{
-    return this.httpClient.get(this.USER_API_URL)   
+  listUsers():Observable<User[]>{
+    return this.httpClient.get<User[]>(this.USER_API_URL)   
   }
 
   findByUserId(id:number):User{
